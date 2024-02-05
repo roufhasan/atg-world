@@ -1,0 +1,206 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.main-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* Navbar */
+.search-bar {
+  background: #f2f2f2;
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 21px;
+  width: 33%;
+  display: flex;
+  align-items: center;
+}
+
+.search-bar i {
+  font-size: 18px;
+  color: #7a7a7a;
+  margin-right: 14px;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #5c5c5c;
+  width: 100%;
+}
+
+/* Hero Section */
+.hero-section {
+  width: 100%;
+  background-image: linear-gradient(
+      to left bottom,
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.45)
+    ),
+    url(../img/hero-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 14px 16px;
+}
+
+.hero-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fa-arrow-left {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.title {
+  margin-top: 8rem;
+  font-size: 28px;
+}
+
+.sub-title {
+  margin-bottom: 1.15;
+}
+
+/* Card */
+.card-body {
+  padding-bottom: 20px !important;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.card-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #495057;
+}
+
+.card-profile-img {
+  width: 37px;
+  height: 37px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.card-button {
+  color: #e56135 !important;
+}
+
+/* Desktop Location */
+.user-location {
+  max-width: 250px;
+  margin-left: auto;
+  margin-top: 2rem;
+}
+
+.user-location-text {
+  max-width: 250px;
+  margin-left: auto;
+}
+
+/* Sign In Modal */
+.sign-in-modal {
+  height: 0px;
+  visibility: hidden;
+}
+
+.open-sign-in-modal {
+  height: 100vh;
+  visibility: visible;
+}
+
+.sign-in-modal form input:focus {
+  outline: none;
+  border: 1px solid #495057;
+  font-weight: 400 !important;
+}
+
+.sign-in-modal form .sign-in-submit {
+  font-size: 13px;
+  padding: 10px 55px;
+  border-radius: 20px;
+  border: 0;
+  outline: 0;
+  background: #2f6ce5;
+  color: white;
+}
+
+.sign-in-modal form .forgot-pass {
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  padding-bottom: 108px;
+}
+
+/* Sign Up Modal */
+.sign-up-modal {
+  height: 0px;
+  visibility: hidden;
+}
+
+.open-sign-up-modal {
+  height: 100vh;
+  visibility: visible;
+}
+
+.sign-up-modal form .sign-up-submit {
+  font-size: 13px;
+  padding: 10px 30px;
+  border-radius: 20px;
+  border: 0;
+  outline: 0;
+  background: #2f6ce5;
+  color: white;
+}
+
+@media only screen and (min-width: 992px) {
+  .title {
+    margin-top: 16rem;
+    font-size: 40px;
+  }
+
+  .sub-title {
+    margin-bottom: 5rem;
+    font-size: 1.125rem;
+  }
+
+  .sign-in-form,
+  .sign-up-form {
+    width: 100%;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+
+  .sign-in-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .sign-in-submit,
+  .sign-up-submit {
+    width: 100%;
+  }
+
+  .modal-close-lg {
+    color: #bebebe;
+    font-size: 1.5rem;
+    position: absolute;
+    top: -40px;
+    right: -20px;
+  }
+}

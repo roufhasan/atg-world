@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ATG World</title>
+    <link rel="stylesheet" href="./assests/css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/8e8567a727.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="main-container position-relative">
+    <header>
+      <!-- Desktop Navbar -->
+      <nav
+        class="d-none d-lg-flex align-items-center justify-content-between p-3"
+      >
+        <img src="./assests/img/logo.png" alt="" />
+
+        <div class="search-bar">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input
+            type="text"
+            placeholder="Search for your favorite groups in ATG"
+          />
+        </div>
+
+        <div class="dropdown">
+          <a
+            class="btn fs-6 fw-semibold dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Create account:
+            <span class="text-primary fw-semibold">It's free!</span>
+          </a>
+
+          <ul class="dropdown-menu">
+            <li>
+              <a
+                onclick="openSignUpModal()"
+                class="dropdown-item cursor-pointer"
+                >Sign Up</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="openSignInModal()"
+                class="dropdown-item cursor-pointer"
+                >Sign In</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Hero Section -->
+      <section id="hero" class="hero-section px-lg-5">
+        <!-- Mobile Navbar -->
+        <div class="hero-nav d-lg-none">
+          <i class="fa-solid fa-arrow-left"></i>
+          <a href="#" class="btn btn-outline-light" onclick="openSignInModal()"
+            >Join Group</a
+          >
+        </div>
+        <div>
+          <h1 class="text-light fw-semibold title">Computer Engineering</h1>
+          <p class="text-light sub-title">
+            142,765 Computer Engineers follow this
+          </p>
+        </div>
+      </section>
+    </header>
+
+    <!-- Main Section -->
+    <main class="px-lg-5">
+      <!-- Mobile Filter -->
+      <div
+        class="d-flex d-lg-none justify-content-between align-items-center px-3 mt-3 mb-4"
+      >
+        <h2 class="fs-5 fw-semibold">Posts(368)</h2>
+        <div class="dropdown">
+          <a
+            class="btn bg-secondary-subtle fs-6 fw-semibold dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Filter: All
+          </a>
+
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Desktop Post Navbar -->
+      <nav
+        class="navbar navbar-expand-lg d-none d-lg-block border-bottom border-2 mb-lg-4 mt-lg-5 py-lg-0"
+      >
+        <div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item border-bottom border-dark border-2 pb-2">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >All Posts(32)</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Article</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Event</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Education</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Job</a>
+              </li>
+            </ul>
+            <div class="dropdown me-3 pb-2">
+              <button
+                class="btn bg-secondary-subtle dropdown-toggle fw-semibold"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Write a Post
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </div>
+            <button class="btn btn-primary mb-2">
+              +<i class="fa-solid fa-user-group"></i> <span>Join Group</span>
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Cards & Location -->
+      <section class="container px-0">
+        <div class="row gx-5 mx-0">
+          <!-- Card Container -->
+          <div class="col-12 col-lg-8 px-0">
+            <!-- Card -->
+            <div class="card border-0 shadow">
+              <img
+                src="./assests/img/card-1.png"
+                class="card-img-top"
+                alt="..."
+              />
+
+              <div class="card-body">
+                <h5 class="text-dark-emphasis fs-6 fw-semibold mb-3">
+                  ✍️ Article
+                </h5>
+
+                <div class="d-flex justify-content-between">
+                  <p class="card-title mb-3">
+                    What if famous brands had regular fonts? Meet RegulaBrands!
+                  </p>
+                  <!-- Card Drop-down Button -->
+                  <div class="dropdown">
+                    <i
+                      class="fa-solid fa-ellipsis fs-3"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    ></i>
+
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Edit</a></li>
+                      <li><a class="dropdown-item" href="#">Report</a></li>
+                      <li>
+                        <a class="dropdown-item" href="#">Option 3</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <p class="card-text mb-4">
+                  I've worked in UX for the better part of a decade. F..
+                </p>
+                <!-- Card Footer -->
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="d-flex">
+                    <img
+                      class="card-profile-img"
+                      src="./assests/img/profile-1.jpg"
+                      alt=""
+                    />
+                    <div class="ps-2 lh-sm">
+                      <p class="fw-semibold mb-0">Sarthak Kamra</p>
+                      <p class="text-secondary mb-0">1.4k views</p>
+                    </div>
+                  </div>
+                  <div
+                    class="d-inline-flex align-items-center btn bg-secondary-subtle"
+                  >
+                    <i class="fa-solid fa-share-nodes fs-5"></i>
+                    <p class="mb-0 ps-1">Share</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="card border-0 shadow my-3">
+              <img
+                src="./assests/img/card-2.png"
+                class="card-img-top"
+                alt="..."
+              />
+
+              <div class="card-body">
+                <h5 class="text-dark-emphasis fs-6 fw-semibold mb-3">
+                  🔬 Education
+                </h5>
+
+                <div class="d-flex justify-content-between">
+                  <p class="card-title mb-3 me-3">
+                    Tax Benefits for Investment under National Pension Scheme
+                    launched by Government
+                  </p>
+                  <!-- Card Drop-down Button -->
+                  <div class="dropdown">
+                    <i
+                      class="fa-solid fa-ellipsis fs-3"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    ></i>
+
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Edit</a></li>
+                      <li><a class="dropdown-item" href="#">Report</a></li>
+                      <li>
+                        <a class="dropdown-item" href="#">Option 3</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <p class="card-text mb-4">
+                  I've worked in UX for the better part of a decade. F..
+                </p>
+                <!-- Card Footer -->
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="d-flex">
+                    <img
+                      class="card-profile-img"
+                      src="./assests/img/profile-2.jpg"
+                      alt=""
+                    />
+                    <div class="ps-2 lh-sm">
+                      <p class="fw-semibold mb-0">Sarah West</p>
+                      <p class="text-secondary mb-0">4.8k views</p>
+                    </div>
+                  </div>
+                  <div
+                    class="d-inline-flex align-items-center btn bg-secondary-subtle"
+                  >
+                    <i class="fa-solid fa-share-nodes fs-5"></i>
+                    <p class="mb-0 ps-1">Share</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="card border-0 shadow">
+              <img
+                src="./assests/img/card-3.png"
+                class="card-img-top"
+                alt="..."
+              />
+
+              <div class="card-body">
+                <h5 class="text-dark-emphasis fs-6 fw-semibold mb-3">
+                  🗓️ Meetup
+                </h5>
+
+                <div class="d-flex justify-content-between">
+                  <p class="card-title mb-3 me-3">
+                    Finance & Investment Elite Social Mixer @Lujiazui
+                  </p>
+                  <!-- Card Drop-down Button -->
+                  <div class="dropdown">
+                    <i
+                      class="fa-solid fa-ellipsis fs-3"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    ></i>
+
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Edit</a></li>
+                      <li><a class="dropdown-item" href="#">Report</a></li>
+                      <li>
+                        <a class="dropdown-item" href="#">Option 3</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="card-text mb-4 d-flex fw-semibold">
+                  <div>
+                    <i class="fa-regular fa-calendar"></i>
+                    <span>Fri, 12 Oct, 2018</span>
+                  </div>
+                  <div class="ms-4">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Ahmedabad, India</span>
+                  </div>
+                </div>
+
+                <button
+                  class="card-button w-100 fw-semibold btn btn-outline-secondary mb-4"
+                >
+                  Visit Website
+                </button>
+
+                <!-- Card Footer -->
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="d-flex">
+                    <img
+                      class="card-profile-img"
+                      src="./assests/img/profile-3.jpg"
+                      alt=""
+                    />
+                    <div class="ps-2 lh-sm">
+                      <p class="fw-semibold mb-0">Ronal Jones</p>
+                      <p class="text-secondary mb-0">800 views</p>
+                    </div>
+                  </div>
+                  <div
+                    class="d-inline-flex align-items-center btn bg-secondary-subtle"
+                  >
+                    <i class="fa-solid fa-share-nodes fs-5"></i>
+                    <p class="mb-0 ps-1">Share</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="card border-0 shadow my-3">
+              <div class="card-body">
+                <h5 class="text-dark-emphasis fs-6 fw-semibold mb-3">💼 Job</h5>
+
+                <div class="d-flex justify-content-between">
+                  <p class="card-title mb-3 me-3">Software Developer - II</p>
+                  <!-- Card Drop-down Button -->
+                  <div class="dropdown">
+                    <i
+                      class="fa-solid fa-ellipsis fs-3"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    ></i>
+
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Edit</a></li>
+                      <li><a class="dropdown-item" href="#">Report</a></li>
+                      <li>
+                        <a class="dropdown-item" href="#">Option 3</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="card-text mb-4 d-flex fw-semibold">
+                  <div>
+                    <i class="fa-solid fa-briefcase"></i>
+                    <span>Innovaccer Analytic...</span>
+                  </div>
+                  <div class="ms-4">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Noida, India</span>
+                  </div>
+                </div>
+                <!-- Card Footer -->
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="d-flex">
+                    <img
+                      class="card-profile-img"
+                      src="./assests/img/profile-2.jpg"
+                      alt=""
+                    />
+                    <div class="ps-2 lh-sm">
+                      <p class="fw-semibold mb-0">Joseph Gray</p>
+                      <p class="text-secondary mb-0">1.7k views</p>
+                    </div>
+                  </div>
+                  <div
+                    class="d-inline-flex align-items-center btn bg-secondary-subtle"
+                  >
+                    <i class="fa-solid fa-share-nodes fs-5"></i>
+                    <p class="mb-0 ps-1">Share</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Location Field -->
+          <div class="d-none d-lg-block col-lg-4">
+            <div
+              class="d-flex align-items-center justify-content-between border-bottom pb-2 user-location"
+            >
+              <div>
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Noida, India</span>
+              </div>
+              <i class="fa-solid fa-pen"></i>
+            </div>
+            <p class="user-location-text text-secondary mt-4">
+              <i class="fa-solid fa-circle-exclamation"></i>
+              <span class="ms-2"
+                >Your location will help us serve better and extend a
+                personalised experience.
+              </span>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Sign In Modal -->
+    <div
+      class="sign-in-modal position-fixed top-0 start-0 w-100 bg-black bg-opacity-75 d-flex flex-column justify-content-end justify-content-lg-center"
+      id="sign-in-modal"
+    >
+      <div class="sign-in-form bg-white w-100 rounded-1 position-relative">
+        <div
+          class="d-none d-lg-block bg-success-subtle text-success fw-medium text-center py-3 rounded-start-1 rounded-end-1"
+        >
+          Let's learn, share & inspire each other with our passion for computer
+          engineering. Sign up now 🤘🏼
+        </div>
+        <div
+          class="d-flex justify-content-between align-items-center px-3 px-lg-5 my-4"
+        >
+          <h3 class="d-lg-none">Welcome back!</h3>
+          <h3 class="sign-in-title d-none d-lg-block">Sign In</h3>
+          <i
+            class="fa-solid fa-circle-xmark fs-5 cursor-pointer d-lg-none"
+            onclick="closeSignInModal()"
+          ></i>
+          <p class="d-none d-lg-block">
+            Don’t have an account yet?
+            <span
+              onclick="openSignUpModal()"
+              class="cursor-pointer text-primary fw-semibold"
+              >Create new for free!</span
+            >
+          </p>
+        </div>
+        <div class="d-lg-flex justify-content-between w-100">
+          <form class="px-3 px-lg-5 w-100">
+            <input
+              class="w-100 p-2 bg-body-tertiary border-1 border-secondary-subtle border-bottom-0 rounded-1 fw-semibold"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+            />
+            <br />
+            <input
+              class="w-100 p-2 bg-body-tertiary border-1 border-secondary-subtle rounded-1 fw-semibold mb-4"
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password"
+            />
+            <div class="d-flex align-items-center justify-content-between mb-4">
+              <input
+                class="sign-in-submit fw-semibold"
+                type="submit"
+                value="Sign In"
+              />
+              <p
+                class="fw-medium border-bottom border-dark text-secondary mb-0 d-lg-none"
+              >
+                or,
+                <a
+                  onclick="openSignUpModal()"
+                  class="text-secondary text-decoration-none"
+                  href="#"
+                  >Create Account</a
+                >
+              </p>
+            </div>
+            <div>
+              <button
+                class="w-100 bg-transparent d-flex align-items-center justify-content-center py-2 border border-secondary-subtle rounded mb-3"
+              >
+                <img src="./assests/img/facebook-icon.png" alt="" />
+                <p class="mb-0 ms-2">Sign in with Facebook</p>
+              </button>
+              <button
+                class="w-100 bg-transparent d-flex align-items-center justify-content-center py-2 border border-secondary-subtle rounded mb-4"
+              >
+                <img src="./assests/img/google-icon.png" alt="" />
+                <p class="mb-0 ms-2">Sign in with Google</p>
+              </button>
+              <p class="forgot-pass text-center">Forgot Password?</p>
+            </div>
+          </form>
+          <div class="w-100 text-center d-none d-lg-block">
+            <img
+              src="./assests/img/authentication.png"
+              alt=""
+              class="auth-img"
+            />
+          </div>
+        </div>
+
+        <!-- Modal Close Button Large Device -->
+        <i
+          class="fa-solid fa-circle-xmark cursor-pointer d-none d-lg-block modal-close-lg"
+          onclick="closeSignInModal()"
+        ></i>
+      </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div
+      class="sign-up-modal position-fixed top-0 start-0 w-100 bg-black bg-opacity-75 d-flex flex-column justify-content-end justify-content-lg-center"
+      id="sign-up-modal"
+    >
+      <div class="sign-up-form bg-white w-100 rounded-1 position-relative">
+        <div
+          class="d-none d-lg-block bg-success-subtle text-success fw-medium text-center py-3 rounded-start-1 rounded-end-1"
+        >
+          Let's learn, share & inspire each other with our passion for computer
+          engineering. Sign up now 🤘🏼
+        </div>
+        <div
+          class="d-flex justify-content-between align-items-center px-3 px-lg-5 my-4"
+        >
+          <h3 class="d-lg-none">Welcome back!</h3>
+          <h3 class="sign-in-title d-none d-lg-block">Create Account</h3>
+          <i
+            class="fa-solid fa-circle-xmark fs-5 cursor-pointer d-lg-none"
+            onclick="closeSignUpModal()"
+          ></i>
+          <p class="d-none d-lg-block">
+            Already have an account yet?
+            <span
+              onclick="openSignInModal()"
+              class="cursor-pointer text-primary fw-semibold"
+              >Sign In</span
+            >
+          </p>
+        </div>
+        <div class="d-lg-flex justify-content-between w-100">
+          <form class="px-3 px-lg-5 w-100">
+            <div class="d-flex w-100">
+              <input
+                class="w-50 border-end-0 p-2 bg-body-tertiary border-1 border-secondary-subtle border-bottom-0 fw-semibold rounded-start-1"
+                type="text"
+                name="first_name"
+                id="first_name"
+                placeholder="First Name"
+              />
+              <input
+                class="w-50 p-2 bg-body-tertiary border-1 border-secondary-subtle border-bottom-0 fw-semibold rounded-end-1"
+                type="text"
+                name="last_name"
+                id="last_name"
+                placeholder="Last Name"
+              />
+            </div>
+            <input
+              class="w-100 p-2 bg-body-tertiary border-1 border-secondary-subtle border-bottom-0 fw-semibold"
+              type="email"
+              name="email"
+              placeholder="Email"
+            />
+            <input
+              class="w-100 p-2 bg-body-tertiary border-1 border-secondary-subtle border-bottom-0 fw-semibold"
+              type="password"
+              name="password"
+              placeholder="Password"
+            />
+            <input
+              class="w-100 p-2 bg-body-tertiary border-1 border-secondary-subtle fw-semibold mb-4 rounded-bottom-1"
+              type="password"
+              name="password"
+              placeholder="Confirm Password"
+            />
+            <div class="d-flex align-items-center justify-content-between mb-4">
+              <input
+                class="sign-up-submit fw-semibold"
+                type="submit"
+                value="Create Account"
+              />
+              <p
+                class="fw-medium border-bottom border-dark text-secondary mb-0 d-lg-none"
+              >
+                or,
+                <a
+                  onclick="openSignInModal()"
+                  class="text-secondary text-decoration-none"
+                  href="#"
+                  >Sign In</a
+                >
+              </p>
+            </div>
+            <div>
+              <button
+                class="w-100 bg-transparent d-flex align-items-center justify-content-center py-2 border border-secondary-subtle rounded mb-3"
+              >
+                <img src="./assests/img/facebook-icon.png" alt="" />
+                <p class="mb-0 ms-2">Sign in with Facebook</p>
+              </button>
+              <button
+                class="w-100 bg-transparent d-flex align-items-center justify-content-center py-2 border border-secondary-subtle rounded mb-4"
+              >
+                <img src="./assests/img/google-icon.png" alt="" />
+                <p class="mb-0 ms-2">Sign in with Google</p>
+              </button>
+              <p class="forgot-pass text-center d-lg-none">
+                By signing up, you agree to our Terms & conditions, Privacy
+                policy
+              </p>
+            </div>
+          </form>
+          <div class="w-100 text-center d-none d-lg-block">
+            <img
+              src="./assests/img/authentication.png"
+              alt=""
+              class="auth-img"
+            />
+            <p class="forgot-pass text-center d-lg-block text-secondary">
+              By signing up, you agree to our Terms & conditions, Privacy policy
+            </p>
+          </div>
+        </div>
+
+        <!-- Modal Close Button Large Device -->
+        <i
+          class="fa-solid fa-circle-xmark cursor-pointer d-none d-lg-block modal-close-lg"
+          onclick="closeSignUpModal()"
+        ></i>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assests/js/script.js"></script>
+  </body>
+</html>
